@@ -1,15 +1,9 @@
-# Citim datele de la utilizator
-pret = float(input("Introdu pretul unui obiect (in lei): "))
-bucati = int(input("Introdu cate bucati vrei sa cumperi: "))
-bani = float(input("Introdu cati bani ai (in lei): "))
+pret = float(input("Prețul unui obiect (lei): "))
+bucati = int(input("Câte bucăți vrei să cumperi: "))
+bani = float(input("Câți bani ai (lei): "))
 
-# Calculam costul total
 cost_total = pret * bucati
+rest = bani - cost_total
 
-# Verificam daca sunt suficienti bani
-if bani >= cost_total:
-    print("Poti cumpara obiectele!")
-    print(f"Iti vor ramane {bani - cost_total:.2f} lei.")
-else:
-    print("Nu ai suficienti bani pentru aceste obiecte.")
-    print(f"Iti mai lipsesc {cost_total - bani:.2f} lei.")
+print("Costul total este:", cost_total, "lei")
+print("Bani rămași după cumpărături:", rest, "lei")
